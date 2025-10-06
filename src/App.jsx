@@ -18,7 +18,7 @@ function App() {
     setWeatherData(null)
 
     try {
-      const response = await fetch(url)
+      const response = await fetch(`http://${url}/api/v1/weather`)
       if (!response.ok) {
         throw new Error('Error al obtener los datos')
       }
